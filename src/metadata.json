@@ -1,0 +1,9 @@
+{
+  "name": "Window Control",
+  "description": "Query or modify geometry and metadata of open windows",
+  "uuid": "windowctl@Clueliss.github.com",
+  "shell-version": [
+    "40",
+    "41"
+  ]
+}
