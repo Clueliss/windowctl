@@ -27,7 +27,7 @@ const DBusIface = '<node>\
             <arg type="u" direction="out" name="numMonitors"/>\
         </method>\
         <method name="ListWindows">\
-            <arg type="a((iiiib)iuss)" direction="out" name="result"/>\
+            <arg type="a((iiiib)iusss)" direction="out" name="result"/>\
         </method>\
         <method name="SetWindowGeomByClass">\
             <arg type="s" direction="in" name="windowClass" />\
@@ -72,7 +72,8 @@ const DBusClass = new Lang.Class({
                     w.get_pid(),
                     w.get_stable_sequence(),
                     w.get_wm_class() || "",
-                    w.get_gtk_application_id() || ""
+                    w.get_gtk_application_id() || "",
+                    w.get_sandboxed_app_id() || "",
                 ];
             });
     },
